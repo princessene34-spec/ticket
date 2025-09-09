@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment & Ticket System</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+  <div class="container">
+    <h2>🎟 Online Payment & Ticket</h2>
+
+
+    <form id="paymentForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="amount">Amount(NGN):</label>
+      <input type="number" id="amount" min="5000" max="20000" required>
+
+      <button type="submit">Make Payment</button>
+    </form>
+
+
+    <div id="verification" class="hidden">
+      <h3>Enter Verification Code</h3>
+      <input type="text" id="verifyCode" placeholder="Enter code">
+      <button id="verifyBtn">Verify</button>
+    </div>
+
+
+    <div id="ticket" class="hidden">
+      <h2>✅ Payment Successful</h2>
+      <p><strong>Ticket ID:</strong> <span id="ticketId"></span></p>
+      <p><strong>Name:</strong> <span id="ticketName"></span></p>
+      <p><strong>Email:</strong> <span id="ticketEmail"></span></p>
+      <p><strong>Amount Paid:</strong> $<span id="ticketAmount"></span></p>
+      <button onclick="window.print()">Download Ticket</button>
+    </div>
+  </div>
+
+ <script src="scripts.js"></script>
+</body>
+
+</html>
